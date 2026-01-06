@@ -17,6 +17,7 @@
         <div class="buttons">
             <button id="zacniBtn" onclick="zacniKamero()">Zaženi kamero</button>
             <button id="zajemiBtn" onclick="zajemiInPoslji()" disabled>Zajemi in analiziraj</button>
+            <button id="testBtn" onclick="zazeniTest()">Zazeni test</button>
         </div>
         
         <div class="rezultat" id="rezultat"></div>
@@ -149,6 +150,37 @@
             setTimeout(() => {
                 rezultatDiv.style.display = 'none';
             }, 5000);
+        }
+
+        async function zazeniTest() {
+            try {
+                status.textContent = '⏳ Pošiljam testno sliko...';
+                zajemiBtn.disabled = true;
+
+                const response = await fetch('/test');
+                const data = await response.json();
+
+                if (data.status === 'uspeh') {
+                    prikaziRezultat(
+                        `Test uspešen!<br>
+                        Povprečna vrednost: <strong>${data.povprecna_vrednost.toFixed(2)}</strong><br>
+                        Velikost: ${data.velikost_slike.visina}x${data.velikost_slike.sirina}`,
+                        true
+                    );
+                    naloziZgodovino();
+                } else {
+                    prikaziRezultat('Napaka: ' + data.napaka, false);
+                }
+
+                status.textContent = 'Kamera aktivna';
+                zajemiBtn.disabled = false;
+
+            } catch (error) {
+                console.error('Napaka pri testu:', error);
+                prikaziRezultat('Napaka pri komunikaciji s strežnikom', false);
+                status.textContent = 'Napaka pri pošiljanju';
+                zajemiBtn.disabled = false;
+            }
         }
 
         async function naloziZgodovino() {
