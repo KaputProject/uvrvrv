@@ -1,0 +1,482 @@
+{
+  "user": "KUDER LUKA",
+  "iban": "SI56 6100 0002 2720 075",
+  "startDate": "01.04.2025",
+  "endDate": "28.04.2025",
+  "startBalance": 3728.66,
+  "endBalance": 3963.67,
+  "inflow": 1123.74,
+  "outflow": 888.73,
+  "transactions": [
+    {
+      "date": "01.04.2025",
+      "reference": "740510013",
+      "partner": "DAVID G.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 4.20,
+      "balance": 3732.86,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "01.04.2025",
+      "reference": "740510054",
+      "partner": "LANA K.",
+      "description": "mango",
+      "change": 4.20,
+      "balance": 3737.06,
+      "outgoing": false,
+      "known_partner": true
+    },
+    {
+      "date": "01.04.2025",
+      "reference": "740510069",
+      "partner": "KRAMAR ENEJ",
+      "description": ".",
+      "change": 4.12,
+      "balance": 3741.18,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "01.04.2025",
+      "reference": "740588233",
+      "partner": "KRAMAR ENEJ",
+      "description": ".",
+      "change": 0.65,
+      "balance": 3741.83,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "01.04.2025",
+      "reference": "740496037",
+      "partner": "KUDER LUKA",
+      "description": "Automatic servis d.o.o",
+      "change": 0.20,
+      "balance": 3741.63,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "01.04.2025",
+      "reference": "740510689",
+      "partner": "KUDER LUKA",
+      "description": "RESTAVRACIJA MANGO",
+      "change": 16.80,
+      "balance": 3724.83,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "01.04.2025",
+      "reference": "740586890",
+      "partner": "KUDER LUKA",
+      "description": "DM - S046",
+      "change": 10.05,
+      "balance": 3714.78,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "02.04.2025",
+      "reference": "740757889",
+      "partner": "GREGOR V.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 4.62,
+      "balance": 3719.40,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "02.04.2025",
+      "reference": "740757892",
+      "partner": "LANA K.",
+      "description": "ancora",
+      "change": 4.62,
+      "balance": 3724.02,
+      "outgoing": false,
+      "known_partner": true
+    },
+    {
+      "date": "02.04.2025",
+      "reference": "740757945",
+      "partner": "URBAN L.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 4.62,
+      "balance": 3728.64,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "02.04.2025",
+      "reference": "740757946",
+      "partner": "DAVID G.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 4.62,
+      "balance": 3733.26,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "02.04.2025",
+      "reference": "740814683",
+      "partner": "DAVID G.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 4.90,
+      "balance": 3738.16,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "02.04.2025",
+      "reference": "740814700",
+      "partner": "LANA K.",
+      "description": "kitajska",
+      "change": 4.90,
+      "balance": 3743.06,
+      "outgoing": false,
+      "known_partner": true
+    },
+    {
+      "date": "02.04.2025",
+      "reference": "740705348",
+      "partner": "KUDER LUKA",
+      "description": "BESTERSI MAS*PEKARNA S",
+      "change": 1.80,
+      "balance": 3741.26,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "02.04.2025",
+      "reference": "740757854",
+      "partner": "KUDER LUKA",
+      "description": "RESTAVRACIJA ANCORA",
+      "change": 23.10,
+      "balance": 3718.16,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "02.04.2025",
+      "reference": "740814566",
+      "partner": "KUDER LUKA",
+      "description": "RESTAVRACIJA ZLATA SRN",
+      "change": 14.70,
+      "balance": 3703.46,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "02.04.2025",
+      "reference": "740764802",
+      "partner": "KUDER LUKA",
+      "description": "SPAR P KOROSKA MB",
+      "change": 3.46,
+      "balance": 3700.00,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "02.04.2025",
+      "reference": "740761395",
+      "partner": "KUDER LUKA",
+      "description": "MUeLLER MARIBOR 4902 5",
+      "change": 5.85,
+      "balance": 3694.15,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "03.04.2025",
+      "reference": "740906022",
+      "partner": "DAVID G.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 0.76,
+      "balance": 3694.91,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "03.04.2025",
+      "reference": "740927367",
+      "partner": "ENEJ K.",
+      "description": "Takojšnje plačilo - odliv",
+      "change": 4.20,
+      "balance": 3690.71,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "03.04.2025",
+      "reference": "740917573",
+      "partner": "KUDER LUKA",
+      "description": "LPP SINSAY 6413622",
+      "change": 19.47,
+      "balance": 3671.24,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "03.04.2025",
+      "reference": "740906918",
+      "partner": "KUDER LUKA",
+      "description": "BESTERSI MAS*MM PANDA",
+      "change": 3.00,
+      "balance": 3668.24,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "03.04.2025",
+      "reference": "740894203",
+      "partner": "KUDER LUKA",
+      "description": "Automatic servis d.o.o",
+      "change": 0.20,
+      "balance": 3668.04,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "03.04.2025",
+      "reference": "740905961",
+      "partner": "KUDER LUKA",
+      "description": "SP SPECERIJA",
+      "change": 2.63,
+      "balance": 3665.41,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "03.04.2025",
+      "reference": "740920332",
+      "partner": "KUDER LUKA",
+      "description": "SP AVTOBUSNA POSTAJA",
+      "change": 1.44,
+      "balance": 3663.97,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "04.04.2025",
+      "reference": "741299750",
+      "partner": "KUDER LUKA",
+      "description": "PIZZOTEKA K\u0026S",
+      "change": 31.00,
+      "balance": 3632.97,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "07.04.2025",
+      "reference": "741760212",
+      "partner": "TILEN Z.",
+      "description": "Takojšnje plačilo - odliv",
+      "change": 2.00,
+      "balance": 3630.97,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "07.04.2025",
+      "reference": "741769051",
+      "partner": "KRAMAR ENEJ",
+      "description": ".",
+      "change": 150.00,
+      "balance": 3780.97,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "08.04.2025",
+      "reference": "741952830",
+      "partner": "URBAN L.",
+      "description": "Takojšnje plačilo - odliv",
+      "change": 4.63,
+      "balance": 3776.34,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "08.04.2025",
+      "reference": "742002563",
+      "partner": "TILEN Z.",
+      "description": "Takojšnje plačilo - odliv",
+      "change": 0.70,
+      "balance": 3775.64,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "08.04.2025",
+      "reference": "742003598",
+      "partner": "DAVID G.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 1.70,
+      "balance": 3777.34,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "08.04.2025",
+      "reference": "742007933",
+      "partner": "KRAMAR ENEJ",
+      "description": ".",
+      "change": 3.42,
+      "balance": 3780.76,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "08.04.2025",
+      "reference": "742003591",
+      "partner": "KUDER LUKA",
+      "description": "PEKARNA IN SLASCICARNA",
+      "change": 8.20,
+      "balance": 3772.56,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "08.04.2025",
+      "reference": "741920643",
+      "partner": "KUDER LUKA",
+      "description": "SPAR P KOROSKA MB",
+      "change": 0.77,
+      "balance": 3771.79,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "09.04.2025",
+      "reference": "742197272",
+      "partner": "URBAN L.",
+      "description": "Takojšnje plačilo - odliv",
+      "change": 2.00,
+      "balance": 3769.79,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "09.04.2025",
+      "reference": "742161627",
+      "partner": "KUDER LUKA",
+      "description": "HOFER hvala",
+      "change": 8.21,
+      "balance": 3761.58,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "09.04.2025",
+      "reference": "742204005",
+      "partner": "KUDER LUKA",
+      "description": "RESTAVRACIJA ZLATA SRN",
+      "change": 4.90,
+      "balance": 3756.68,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "09.04.2025",
+      "reference": "742126356",
+      "partner": "KUDER LUKA",
+      "description": "SPAR P KOROSKA MB",
+      "change": 4.46,
+      "balance": 3752.22,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "10.04.2025",
+      "reference": "742297298",
+      "partner": "DAVID G.",
+      "description": "Takojšnje plačilo - odliv",
+      "change": 0.65,
+      "balance": 3751.57,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "10.04.2025",
+      "reference": "742298281",
+      "partner": "MDDSZ-DRZAVNE STIPENDIJE - ISCSD 2",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 126.62,
+      "balance": 3878.19,
+      "outgoing": false,
+      "known_partner": true
+    },
+    {
+      "date": "10.04.2025",
+      "reference": "742431505",
+      "partner": "GREGOR V.",
+      "description": "Takojšnje plačilo - odliv",
+      "change": 4.20,
+      "balance": 3873.99,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "10.04.2025",
+      "reference": "742445395",
+      "partner": "DAVID G.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 2.50,
+      "balance": 3876.49,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "10.04.2025",
+      "reference": "742445682",
+      "partner": "TILEN Z.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 1.60,
+      "balance": 3878.09,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "10.04.2025",
+      "reference": "742473603",
+      "partner": "TILEN Z.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 4.00,
+      "balance": 3882.09,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "10.04.2025",
+      "reference": "742477914",
+      "partner": "DAVID G.",
+      "description": "sook al neki",
+      "change": 2.00,
+      "balance": 3884.09,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "10.04.2025",
+      "reference": "742487853",
+      "partner": "KRAMAR ENEJ",
+      "description": ".",
+      "change": 4.00,
+      "balance": 3888.09,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "10.04.2025",
+      "reference": "742439114",
+      "partner": "KUDER LUKA",
+      "description": "LIDL-SI 233",
+      "change": 9.92,
+      "balance": 3878.17,
+      "outgoing": true,
+      "known_partner": false
+    }
+  ]
+}
