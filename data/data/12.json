@@ -1,0 +1,482 @@
+{
+  "user": "KUDER LUKA",
+  "iban": "SI56 6100 0002 2720 075",
+  "startDate": "28.11.2024",
+  "endDate": "30.12.2024",
+  "startBalance": 3490.19,
+  "endBalance": 4092.82,
+  "inflow": 1727.10,
+  "outflow": 1124.47,
+  "transactions": [
+    {
+      "date": "28.11.2024",
+      "reference": "709804286",
+      "partner": "KUDER LUKA",
+      "description": "MUeLLER MARIBOR 4902 4",
+      "change": 2.29,
+      "balance": 3487.90,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "02.12.2024",
+      "reference": "711185479",
+      "partner": "TILEN Z.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 3.50,
+      "balance": 3491.40,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "02.12.2024",
+      "reference": "711185548",
+      "partner": "GREGOR V.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 3.50,
+      "balance": 3494.90,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "02.12.2024",
+      "reference": "711245822",
+      "partner": "GREGOR V.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 2.50,
+      "balance": 3497.40,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "02.12.2024",
+      "reference": "711244561",
+      "partner": "KUDER LUKA",
+      "description": "BESTERSI MAS*MM PANDA",
+      "change": 5.00,
+      "balance": 3492.40,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "02.12.2024",
+      "reference": "711196009",
+      "partner": "KUDER LUKA",
+      "description": "HOFER hvala",
+      "change": 2.18,
+      "balance": 3490.22,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "02.12.2024",
+      "reference": "711191839",
+      "partner": "KUDER LUKA",
+      "description": "KITAJSKA REST.ZVEZDA",
+      "change": 14.00,
+      "balance": 3476.22,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "02.12.2024",
+      "reference": "711246950",
+      "partner": "KUDER LUKA",
+      "description": "MARKET MARIBOR",
+      "change": 8.66,
+      "balance": 3467.56,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "03.12.2024",
+      "reference": "711351270",
+      "partner": "GREGOR V.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 4.70,
+      "balance": 3472.26,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "03.12.2024",
+      "reference": "711351287",
+      "partner": "URBAN L.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 4.20,
+      "balance": 3476.46,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "03.12.2024",
+      "reference": "711351301",
+      "partner": "TILEN Z.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 4.20,
+      "balance": 3480.66,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "03.12.2024",
+      "reference": "711351440",
+      "partner": "KRAMAR ENEJ",
+      "description": ".",
+      "change": 4.20,
+      "balance": 3484.86,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "03.12.2024",
+      "reference": "711351441",
+      "partner": "DAVID G.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 4.20,
+      "balance": 3489.06,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "03.12.2024",
+      "reference": "711351536",
+      "partner": "DAVID G.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 3.50,
+      "balance": 3492.56,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "03.12.2024",
+      "reference": "711411663",
+      "partner": "KUDER LUKA",
+      "description": "BESTERSI MAS*PEKARNA S",
+      "change": 6.40,
+      "balance": 3486.16,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "03.12.2024",
+      "reference": "711351306",
+      "partner": "KUDER LUKA",
+      "description": "RESTAVRACIJA MANGO",
+      "change": 25.70,
+      "balance": 3460.46,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "03.12.2024",
+      "reference": "711410221",
+      "partner": "KUDER LUKA",
+      "description": "MARKET PARISKE KOMUNE",
+      "change": 5.10,
+      "balance": 3455.36,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "04.12.2024",
+      "reference": "711574227",
+      "partner": "KRAMAR ENEJ",
+      "description": ".",
+      "change": 8.00,
+      "balance": 3463.36,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "04.12.2024",
+      "reference": "711623412",
+      "partner": "TILEN Z.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 2.79,
+      "balance": 3466.15,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "04.12.2024",
+      "reference": "711623826",
+      "partner": "ENEJ K.",
+      "description": "Takojšnje plačilo - odliv",
+      "change": 3.25,
+      "balance": 3462.90,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "04.12.2024",
+      "reference": "710273815",
+      "partner": "KUDER LUKA",
+      "description": "AMZN Mktp DE*9E0DR65U5",
+      "change": 159.69,
+      "balance": 3303.21,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "04.12.2024",
+      "reference": "711545231",
+      "partner": "KUDER LUKA",
+      "description": "HOFER hvala",
+      "change": 7.39,
+      "balance": 3295.82,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "04.12.2024",
+      "reference": "711620777",
+      "partner": "KUDER LUKA",
+      "description": "HOFER hvala",
+      "change": 5.09,
+      "balance": 3290.73,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "04.12.2024",
+      "reference": "711574123",
+      "partner": "PE DRAVSKE TERASE",
+      "description": "PE DRAVSKE TERASE",
+      "change": 4.43,
+      "balance": 3286.30,
+      "outgoing": true,
+      "known_partner": true
+    },
+    {
+      "date": "05.12.2024",
+      "reference": "711694921",
+      "partner": "KUDER LUKA",
+      "description": "Automatic servis d.o.o",
+      "change": 0.70,
+      "balance": 3285.60,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "06.12.2024",
+      "reference": "712114845",
+      "partner": "KUDER LUKA",
+      "description": "PE Coffee Republic WL",
+      "change": 7.70,
+      "balance": 3277.90,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "06.12.2024",
+      "reference": "712098670",
+      "partner": "KUDER LUKA",
+      "description": "MCDONALDS CITYCENTER",
+      "change": 2.98,
+      "balance": 3274.92,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "06.12.2024",
+      "reference": "712108829",
+      "partner": "KUDER LUKA",
+      "description": "INTERSPAR CELJE",
+      "change": 30.94,
+      "balance": 3243.98,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "06.12.2024",
+      "reference": "712106422",
+      "partner": "KUDER LUKA",
+      "description": "MUeLLER CELJE 4917 3",
+      "change": 7.59,
+      "balance": 3236.39,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "06.12.2024",
+      "reference": "712122807",
+      "partner": "KUDER LUKA",
+      "description": "MUeLLER CELJE 4917 3",
+      "change": 11.48,
+      "balance": 3224.91,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "07.12.2024",
+      "reference": "712242899",
+      "partner": "KRAMAR ENEJ",
+      "description": ".",
+      "change": 10.00,
+      "balance": 3234.91,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "07.12.2024",
+      "reference": "712224416",
+      "partner": "KUDER LUKA",
+      "description": "SM JAGER-LATKOVA VAS",
+      "change": 3.52,
+      "balance": 3231.39,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "08.12.2024",
+      "reference": "712376170",
+      "partner": "LANA K.",
+      "description": "darilo",
+      "change": 10.00,
+      "balance": 3241.39,
+      "outgoing": false,
+      "known_partner": true
+    },
+    {
+      "date": "08.12.2024",
+      "reference": "712378468",
+      "partner": "LANA K.",
+      "description": "od tare pa neze",
+      "change": 10.00,
+      "balance": 3251.39,
+      "outgoing": false,
+      "known_partner": true
+    },
+    {
+      "date": "08.12.2024",
+      "reference": "712378520",
+      "partner": "DAVID G.",
+      "description": "he take me money while im in need",
+      "change": 10.00,
+      "balance": 3261.39,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "08.12.2024",
+      "reference": "712378788",
+      "partner": "NIKA G.",
+      "description": "za iris darilo od nike",
+      "change": 10.00,
+      "balance": 3271.39,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "09.12.2024",
+      "reference": "712569606",
+      "partner": "DAVID G.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 2.50,
+      "balance": 3273.89,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "09.12.2024",
+      "reference": "712571613",
+      "partner": "TILEN Z.",
+      "description": "za darilo",
+      "change": 10.00,
+      "balance": 3283.89,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "09.12.2024",
+      "reference": "712577854",
+      "partner": "DAVID G.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 1.00,
+      "balance": 3284.89,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "09.12.2024",
+      "reference": "712581699",
+      "partner": "KRAMAR ENEJ",
+      "description": ".",
+      "change": 2.00,
+      "balance": 3286.89,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "09.12.2024",
+      "reference": "712544943",
+      "partner": "KUDER LUKA",
+      "description": "MOL 93672 S.BISTRICA",
+      "change": 23.45,
+      "balance": 3263.44,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "09.12.2024",
+      "reference": "712569146",
+      "partner": "KUDER LUKA",
+      "description": "BESTERSI MAS*MM PANDA",
+      "change": 5.00,
+      "balance": 3258.44,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "09.12.2024",
+      "reference": "712578544",
+      "partner": "KUDER LUKA",
+      "description": "HOFER hvala",
+      "change": 5.12,
+      "balance": 3253.32,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "09.12.2024",
+      "reference": "712569842",
+      "partner": "KUDER LUKA",
+      "description": "PEKARNA DRAVA NOVA",
+      "change": 3.00,
+      "balance": 3250.32,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "10.12.2024",
+      "reference": "712746216",
+      "partner": "MDDSZ-DRZAVNE STIPENDIJE - ISCSD 2",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 124.26,
+      "balance": 3374.58,
+      "outgoing": false,
+      "known_partner": true
+    },
+    {
+      "date": "10.12.2024",
+      "reference": "712779970",
+      "partner": "KUDER LUKA",
+      "description": "Central-Cafe",
+      "change": 5.77,
+      "balance": 3368.81,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "10.12.2024",
+      "reference": "712734215",
+      "partner": "KUDER LUKA",
+      "description": "Automatic servis d.o.o",
+      "change": 0.90,
+      "balance": 3367.91,
+      "outgoing": true,
+      "known_partner": false
+    }
+  ]
+}

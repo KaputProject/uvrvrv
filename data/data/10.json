@@ -1,0 +1,492 @@
+{
+  "user": "KUDER LUKA",
+  "iban": "SI56 6100 0002 2720 075",
+  "startDate": "29.09.2024",
+  "endDate": "31.10.2024",
+  "startBalance": 2775.92,
+  "endBalance": 3831.20,
+  "inflow": 2417.90,
+  "outflow": 1362.62,
+  "transactions": [
+    {
+      "date": "29.09.2024",
+      "reference": "694976298",
+      "partner": "KUDER LUKA",
+      "description": "MCDONALDS SWATY",
+      "change": 2.98,
+      "balance": 2772.94,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "29.09.2024",
+      "reference": "694976416",
+      "partner": "KUDER LUKA",
+      "description": "MCDONALDS SWATY",
+      "change": 2.98,
+      "balance": 2769.96,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "30.09.2024",
+      "reference": "695296434",
+      "partner": "KUDER LUKA",
+      "description": "RESTAVRACIJA ZLATA SRN",
+      "change": 3.98,
+      "balance": 2765.98,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "30.09.2024",
+      "reference": "695341598",
+      "partner": "KUDER LUKA",
+      "description": "PANDA CITY D.O.O.",
+      "change": 1.68,
+      "balance": 2764.30,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "30.09.2024",
+      "reference": "695337516",
+      "partner": "KUDER LUKA",
+      "description": "SPAR MAGDALENA",
+      "change": 6.56,
+      "balance": 2757.74,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "01.10.2024",
+      "reference": "695892422",
+      "partner": "TELEFIX D.O.O.",
+      "description": "KUPOPRODAJNA POGODBA 090924-1",
+      "change": 195.00,
+      "balance": 2952.74,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "01.10.2024",
+      "reference": "695899247",
+      "partner": "ENEJ K.",
+      "description": "Takojšnje plačilo - odliv",
+      "change": 0.85,
+      "balance": 2951.89,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "01.10.2024",
+      "reference": "695899846",
+      "partner": "KRAMAR ENEJ",
+      "description": ".",
+      "change": 0.70,
+      "balance": 2952.59,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "01.10.2024",
+      "reference": "695900887",
+      "partner": "DAVID G.",
+      "description": "Takojšnje plačilo - odliv",
+      "change": 0.50,
+      "balance": 2952.09,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "01.10.2024",
+      "reference": "695949859",
+      "partner": "GREGOR V.",
+      "description": "Takojšnje plačilo - odliv",
+      "change": 4.70,
+      "balance": 2947.39,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "01.10.2024",
+      "reference": "695953553",
+      "partner": "ENEJ K.",
+      "description": "Takojšnje plačilo - odliv",
+      "change": 0.50,
+      "balance": 2946.89,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "01.10.2024",
+      "reference": "695963209",
+      "partner": "SS D.O.O.",
+      "description": "PRILIV PO TRR",
+      "change": 540.40,
+      "balance": 3487.29,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "01.10.2024",
+      "reference": "695853225",
+      "partner": "KUDER LUKA",
+      "description": "EUROPLAKAT MA",
+      "change": 3.00,
+      "balance": 3484.29,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "01.10.2024",
+      "reference": "695875334",
+      "partner": "PE DRAVSKE TERASE",
+      "description": "PE DRAVSKE TERASE",
+      "change": 1.38,
+      "balance": 3482.91,
+      "outgoing": true,
+      "known_partner": true
+    },
+    {
+      "date": "01.10.2024",
+      "reference": "695897791",
+      "partner": "PE DRAVSKE TERASE",
+      "description": "PE DRAVSKE TERASE",
+      "change": 2.30,
+      "balance": 3480.61,
+      "outgoing": true,
+      "known_partner": true
+    },
+    {
+      "date": "02.10.2024",
+      "reference": "696069768",
+      "partner": "ASPIRIA d.o.o.",
+      "description": "Public Transport incl. in Stipendia",
+      "change": 200.00,
+      "balance": 3680.61,
+      "outgoing": false,
+      "known_partner": true
+    },
+    {
+      "date": "02.10.2024",
+      "reference": "696182029",
+      "partner": "DAVID G.",
+      "description": "Takojšnje plačilo - odliv",
+      "change": 4.00,
+      "balance": 3676.61,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "02.10.2024",
+      "reference": "696187961",
+      "partner": "KUDER LUKA",
+      "description": "HOFER hvala",
+      "change": 8.55,
+      "balance": 3668.06,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "03.10.2024",
+      "reference": "696258494",
+      "partner": "GREGOR V.",
+      "description": "Takojšnje plačilo - odliv",
+      "change": 1.60,
+      "balance": 3666.46,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "03.10.2024",
+      "reference": "696258693",
+      "partner": "GREGOR V.",
+      "description": "Takojšnje plačilo - odliv",
+      "change": 0.20,
+      "balance": 3666.26,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "03.10.2024",
+      "reference": "696321659",
+      "partner": "KUDER LUKA",
+      "description": "RESTAVRACIJA ZLATA SRN",
+      "change": 3.98,
+      "balance": 3662.28,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "03.10.2024",
+      "reference": "696459070",
+      "partner": "KUDER LUKA",
+      "description": "INTERSPAR MARIBOR",
+      "change": 3.48,
+      "balance": 3658.80,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "03.10.2024",
+      "reference": "696463812",
+      "partner": "KUDER LUKA",
+      "description": "INTERSPAR MARIBOR",
+      "change": 7.12,
+      "balance": 3651.68,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "04.10.2024",
+      "reference": "696556301",
+      "partner": "TILEN Z.",
+      "description": "za snickers",
+      "change": 1.19,
+      "balance": 3652.87,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "04.10.2024",
+      "reference": "696590992",
+      "partner": "KRAMAR ENEJ",
+      "description": ".",
+      "change": 50.00,
+      "balance": 3702.87,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "04.10.2024",
+      "reference": "696591415",
+      "partner": "ENEJ K.",
+      "description": "Takojšnje plačilo - odliv",
+      "change": 2.00,
+      "balance": 3700.87,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "04.10.2024",
+      "reference": "696602363",
+      "partner": "DAVID G.",
+      "description": "Takojšnje plačilo - odliv",
+      "change": 8.40,
+      "balance": 3692.47,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "04.10.2024",
+      "reference": "696642194",
+      "partner": "TILEN Z.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 0.68,
+      "balance": 3693.15,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "04.10.2024",
+      "reference": "696645031",
+      "partner": "KRAMAR ENEJ",
+      "description": ".",
+      "change": 1.50,
+      "balance": 3694.65,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "04.10.2024",
+      "reference": "696537188",
+      "partner": "KUDER LUKA",
+      "description": "Automatic servis d.o.o",
+      "change": 0.70,
+      "balance": 3693.95,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "04.10.2024",
+      "reference": "696555905",
+      "partner": "PE DRAVSKE TERASE",
+      "description": "PE DRAVSKE TERASE",
+      "change": 11.34,
+      "balance": 3682.61,
+      "outgoing": true,
+      "known_partner": true
+    },
+    {
+      "date": "04.10.2024",
+      "reference": "696610598",
+      "partner": "KUDER LUKA",
+      "description": "INTERSPAR MARIBOR-2",
+      "change": 3.34,
+      "balance": 3679.27,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "04.10.2024",
+      "reference": "696642070",
+      "partner": "KUDER LUKA",
+      "description": "SPAR FLORJAN",
+      "change": 2.87,
+      "balance": 3676.40,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "06.10.2024",
+      "reference": "696913110",
+      "partner": "KUDER LUKA",
+      "description": "KFC DOBRENJE EAST OMV",
+      "change": 18.40,
+      "balance": 3658.00,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "07.10.2024",
+      "reference": "697127583",
+      "partner": "MATEJ N.",
+      "description": "Vse najboljse",
+      "change": 50.00,
+      "balance": 3708.00,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "07.10.2024",
+      "reference": "697136147",
+      "partner": "ENEJ K.",
+      "description": "Takojšnje plačilo - odliv",
+      "change": 4.00,
+      "balance": 3704.00,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "07.10.2024",
+      "reference": "697008281",
+      "partner": "KUDER LUKA",
+      "description": "INTERSPAR MARIBOR-2",
+      "change": 4.67,
+      "balance": 3699.33,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "07.10.2024",
+      "reference": "697081283",
+      "partner": "KUDER LUKA",
+      "description": "INTERSPAR MARIBOR",
+      "change": 2.78,
+      "balance": 3696.55,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "07.10.2024",
+      "reference": "697083424",
+      "partner": "KUDER LUKA",
+      "description": "INTERSPAR MARIBOR",
+      "change": 4.04,
+      "balance": 3692.51,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "07.10.2024",
+      "reference": "697093166",
+      "partner": "KUDER LUKA",
+      "description": "INTERSPAR MARIBOR",
+      "change": 46.37,
+      "balance": 3646.14,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "08.10.2024",
+      "reference": "697253667",
+      "partner": "ENEJ K.",
+      "description": "Takojšnje plačilo - odliv",
+      "change": 12.00,
+      "balance": 3634.14,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "08.10.2024",
+      "reference": "697253738",
+      "partner": "LANA K.",
+      "description": "KARTA :)",
+      "change": 6.00,
+      "balance": 3640.14,
+      "outgoing": false,
+      "known_partner": true
+    },
+    {
+      "date": "08.10.2024",
+      "reference": "697259810",
+      "partner": "ENEJ K.",
+      "description": "Takojšnje plačilo - odliv",
+      "change": 0.60,
+      "balance": 3639.54,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "08.10.2024",
+      "reference": "697295685",
+      "partner": "LOKAN IRIS",
+      "description": ".",
+      "change": 4.90,
+      "balance": 3644.44,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "08.10.2024",
+      "reference": "697295711",
+      "partner": "GREGOR V.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 4.90,
+      "balance": 3649.34,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "08.10.2024",
+      "reference": "697295815",
+      "partner": "DAVID G.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 4.90,
+      "balance": 3654.24,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "08.10.2024",
+      "reference": "697296229",
+      "partner": "KRAMAR ENEJ",
+      "description": ".",
+      "change": 169.00,
+      "balance": 3823.24,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "08.10.2024",
+      "reference": "697296443",
+      "partner": "TILEN Z.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 4.90,
+      "balance": 3828.14,
+      "outgoing": false,
+      "known_partner": false
+    }
+  ]
+}
