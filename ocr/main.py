@@ -26,18 +26,8 @@ def extract_transactions_from_image(image: Image.Image):
     print("Začen ekstrakcija transakcij iz slike...")
 
     text = pytesseract.image_to_string(image, lang='eng')
-    transactions = []
-    # Example regex: Date Amount Description (adjust as needed)
-    pattern = re.compile(r'(\d{2}\.\d{2}\.\d{4})\s+([\d,.]+)\s+(.+)')
-    for line in text.split('\n'):
-        match = pattern.match(line.strip())
-        if match:
-            date, amount, description = match.groups()
-            transactions.append({
-                'date': date,
-                'amount': amount.replace(',', '.'),
-                'description': description
-            })
+
+    # TODO: Iz besedila tukaj dobi transakicje in druge podatke
 
     print("Ekstrakcija končana.")
 
