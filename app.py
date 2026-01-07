@@ -126,7 +126,6 @@ def zgodovina():
             'napaka': f'Napaka pri branju zgodovine: {str(e)}',
             'status': 'napaka'
         }), 500
-
 @app.route('/test', methods=['GET'])
 def test():
     try:
