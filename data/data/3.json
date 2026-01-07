@@ -1,0 +1,482 @@
+{
+  "user": "KUDER LUKA",
+  "iban": "SI56 6100 0002 2720 075",
+  "startDate": "27.02.2025",
+  "endDate": "31.03.2025",
+  "startBalance": 4126.13,
+  "endBalance": 3728.66,
+  "inflow": 1034.31,
+  "outflow": 1431.78,
+  "transactions": [
+    {
+      "date": "27.02.2025",
+      "reference": "731740149",
+      "partner": "KUDER LUKA",
+      "description": "BESTERSI MAS*MM PANDA",
+      "change": 3.00,
+      "balance": 4123.13,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "27.02.2025",
+      "reference": "731801122",
+      "partner": "KUDER LUKA",
+      "description": "BESTERSI MAS*PEKARNA D",
+      "change": 2.80,
+      "balance": 4120.33,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "27.02.2025",
+      "reference": "731738770",
+      "partner": "KUDER LUKA",
+      "description": "HOFER hvala",
+      "change": 4.17,
+      "balance": 4116.16,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "27.02.2025",
+      "reference": "731695110",
+      "partner": "KUDER LUKA",
+      "description": "RESTAVRACIJA MANGO",
+      "change": 21.00,
+      "balance": 4095.16,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "28.02.2025",
+      "reference": "732209977",
+      "partner": "KUDER LUKA",
+      "description": "INTERSPAR MARIBOR-2",
+      "change": 1.11,
+      "balance": 4094.05,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "03.03.2025",
+      "reference": "733114054",
+      "partner": "LANA K.",
+      "description": "jajcka",
+      "change": 1.75,
+      "balance": 4095.80,
+      "outgoing": false,
+      "known_partner": true
+    },
+    {
+      "date": "03.03.2025",
+      "reference": "733114477",
+      "partner": "LANA K.",
+      "description": "kava",
+      "change": 3.10,
+      "balance": 4098.90,
+      "outgoing": false,
+      "known_partner": true
+    },
+    {
+      "date": "03.03.2025",
+      "reference": "733124909",
+      "partner": "KRAMAR ENEJ",
+      "description": ".",
+      "change": 5.00,
+      "balance": 4103.90,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "03.03.2025",
+      "reference": "733126009",
+      "partner": "LANA K.",
+      "description": "kozlovna",
+      "change": 4.90,
+      "balance": 4108.80,
+      "outgoing": false,
+      "known_partner": true
+    },
+    {
+      "date": "03.03.2025",
+      "reference": "733126463",
+      "partner": "ALJOŠA G.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 4.90,
+      "balance": 4113.70,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "03.03.2025",
+      "reference": "733223305",
+      "partner": "KUDER LUKA",
+      "description": "BESTERSI MAS*PEKARNA D",
+      "change": 1.60,
+      "balance": 4112.10,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "03.03.2025",
+      "reference": "732942329",
+      "partner": "KUDER LUKA",
+      "description": "AMZN Mktp DE*R21X27T14",
+      "change": 127.48,
+      "balance": 3984.62,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "03.03.2025",
+      "reference": "733131811",
+      "partner": "KUDER LUKA",
+      "description": "HOFER hvala",
+      "change": 16.48,
+      "balance": 3968.14,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "03.03.2025",
+      "reference": "733069209",
+      "partner": "KUDER LUKA",
+      "description": "1612 TEDi Sl. Bistrica",
+      "change": 24.95,
+      "balance": 3943.19,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "03.03.2025",
+      "reference": "733114224",
+      "partner": "KUDER LUKA",
+      "description": "ALEKSANDER BISTRO",
+      "change": 9.80,
+      "balance": 3933.39,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "03.03.2025",
+      "reference": "733071080",
+      "partner": "KUDER LUKA",
+      "description": "SPAR SLOVENSKA BISTRIC",
+      "change": 6.83,
+      "balance": 3926.56,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "03.03.2025",
+      "reference": "733123853",
+      "partner": "KUDER LUKA",
+      "description": "PE KOZLOVNA POSTNA",
+      "change": 24.50,
+      "balance": 3902.06,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "04.03.2025",
+      "reference": "733319608",
+      "partner": "TILEN Z.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 0.70,
+      "balance": 3902.76,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "04.03.2025",
+      "reference": "733320349",
+      "partner": "KRAMAR ENEJ",
+      "description": ".",
+      "change": 1.68,
+      "balance": 3904.44,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "04.03.2025",
+      "reference": "733352798",
+      "partner": "DAVID G.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 0.34,
+      "balance": 3904.78,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "04.03.2025",
+      "reference": "733313552",
+      "partner": "KUDER LUKA",
+      "description": "BESTERSI MAS*MM PANDA",
+      "change": 2.92,
+      "balance": 3901.86,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "04.03.2025",
+      "reference": "733290343",
+      "partner": "KUDER LUKA",
+      "description": "SPAR P KOROSKA MB",
+      "change": 3.87,
+      "balance": 3897.99,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "04.03.2025",
+      "reference": "733320174",
+      "partner": "KUDER LUKA",
+      "description": "SPAR P KOROSKA MB",
+      "change": 3.48,
+      "balance": 3894.51,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "04.03.2025",
+      "reference": "733352527",
+      "partner": "KUDER LUKA",
+      "description": "SPAR P KOROSKA MB",
+      "change": 1.02,
+      "balance": 3893.49,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "05.03.2025",
+      "reference": "733528356",
+      "partner": "GREGOR V.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 4.70,
+      "balance": 3898.19,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "05.03.2025",
+      "reference": "733528400",
+      "partner": "LANA K.",
+      "description": "mango",
+      "change": 4.20,
+      "balance": 3902.39,
+      "outgoing": false,
+      "known_partner": true
+    },
+    {
+      "date": "05.03.2025",
+      "reference": "733528412",
+      "partner": "DAVID G.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 4.62,
+      "balance": 3907.01,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "05.03.2025",
+      "reference": "733528417",
+      "partner": "URBAN L.",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 4.20,
+      "balance": 3911.21,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "05.03.2025",
+      "reference": "733528829",
+      "partner": "TILEN Z.",
+      "description": "jaz +NiGer",
+      "change": 8.40,
+      "balance": 3919.61,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "05.03.2025",
+      "reference": "733663150",
+      "partner": "KRAMAR ENEJ",
+      "description": ".",
+      "change": 10.00,
+      "balance": 3929.61,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "05.03.2025",
+      "reference": "733657305",
+      "partner": "KUDER LUKA",
+      "description": "HOFER hvala",
+      "change": 3.28,
+      "balance": 3926.33,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "05.03.2025",
+      "reference": "733414783",
+      "partner": "KUDER LUKA",
+      "description": "HAS-PEK D.O.O.",
+      "change": 4.20,
+      "balance": 3922.13,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "05.03.2025",
+      "reference": "733475972",
+      "partner": "KUDER LUKA",
+      "description": "HAS-PEK D.O.O.",
+      "change": 2.00,
+      "balance": 3920.13,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "05.03.2025",
+      "reference": "733528648",
+      "partner": "KUDER LUKA",
+      "description": "RESTAVRACIJA MANGO",
+      "change": 28.84,
+      "balance": 3891.29,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "06.03.2025",
+      "reference": "733798790",
+      "partner": "ENEJ K.",
+      "description": "Takojšnje plačilo - odliv",
+      "change": 4.90,
+      "balance": 3886.39,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "06.03.2025",
+      "reference": "733840400",
+      "partner": "KUDER LUKA",
+      "description": "SPAR P KOROSKA MB",
+      "change": 1.91,
+      "balance": 3884.48,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "07.03.2025",
+      "reference": "733992002",
+      "partner": "LANA K.",
+      "description": "q",
+      "change": 4.90,
+      "balance": 3889.38,
+      "outgoing": false,
+      "known_partner": true
+    },
+    {
+      "date": "07.03.2025",
+      "reference": "733991931",
+      "partner": "KUDER LUKA",
+      "description": "BESTERSI MAS*Q TABOR",
+      "change": 9.80,
+      "balance": 3879.58,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "07.03.2025",
+      "reference": "734029267",
+      "partner": "KUDER LUKA",
+      "description": "Automatic servis d.o.o",
+      "change": 1.10,
+      "balance": 3878.48,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "07.03.2025",
+      "reference": "734015389",
+      "partner": "KUDER LUKA",
+      "description": "PETROL BS SENTRUPERT",
+      "change": 82.09,
+      "balance": 3796.39,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "10.03.2025",
+      "reference": "734488036",
+      "partner": "MDDSZ-DRZAVNE STIPENDIJE - ISCSD 2",
+      "description": "TAKOJŠNJE PLAČILO - PRILIV",
+      "change": 124.26,
+      "balance": 3920.65,
+      "outgoing": false,
+      "known_partner": true
+    },
+    {
+      "date": "10.03.2025",
+      "reference": "734605781",
+      "partner": "KRAMAR ENEJ",
+      "description": ".",
+      "change": 5.00,
+      "balance": 3925.65,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "10.03.2025",
+      "reference": "734605900",
+      "partner": "LANA K.",
+      "description": "kozlovna",
+      "change": 4.90,
+      "balance": 3930.55,
+      "outgoing": false,
+      "known_partner": true
+    },
+    {
+      "date": "10.03.2025",
+      "reference": "734686360",
+      "partner": "KRAMAR ENEJ",
+      "description": "SE 250",
+      "change": 150.00,
+      "balance": 4080.55,
+      "outgoing": false,
+      "known_partner": false
+    },
+    {
+      "date": "10.03.2025",
+      "reference": "734714631",
+      "partner": "KUDER LUKA",
+      "description": "BESTERSI MAS*PEKARNA S",
+      "change": 1.50,
+      "balance": 4079.05,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "10.03.2025",
+      "reference": "734587172",
+      "partner": "KUDER LUKA",
+      "description": "BESTERSI MAS*KAVARNA S",
+      "change": 8.80,
+      "balance": 4070.25,
+      "outgoing": true,
+      "known_partner": false
+    },
+    {
+      "date": "10.03.2025",
+      "reference": "734590880",
+      "partner": "KUDER LUKA",
+      "description": "POSTA 2101 MARIBOR",
+      "change": 3.11,
+      "balance": 4067.14,
+      "outgoing": true,
+      "known_partner": false
+    }
+  ]
+}

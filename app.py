@@ -1,17 +1,25 @@
+import io
+import csv
+import threading
+import re
+from datetime import datetime
+from pathlib import Path
+
 from flask import Flask, request, jsonify, send_from_directory
 import numpy as np
 from PIL import Image
-import io
-import csv
-from datetime import datetime
-from pathlib import Path
-import threading
+
+import pytesseract
+
+from ocr.main import extract_transactions_from_image, run_test
 
 app = Flask(__name__, static_folder='static/')
 
 # Pot do CSV datoteke
 CSV_PATH = Path('rezultati.csv')
 csv_lock = threading.Lock()
+
+test_mode = True
 
 # Ustvari CSV datoteko če ne obstaja
 if not CSV_PATH.exists():
@@ -77,8 +85,9 @@ def analiziraj():
         # Zapiši rezultat v bazo
         velikost = slika_np.shape[:2]
         zapisi_v_csv(cas, povprecna_vrednost, velikost)
-        
-        # Vrni rezultat
+
+        transactions = extract_transactions_from_image(slika_pil)
+
         return jsonify({
             'cas': cas,
             'povprecna_vrednost': povprecna_vrednost,
@@ -86,6 +95,7 @@ def analiziraj():
                 'visina': velikost[0],
                 'sirina': velikost[1]
             },
+            'transactions': transactions,
             'status': 'uspeh'
         })
     
@@ -117,6 +127,23 @@ def zgodovina():
             'status': 'napaka'
         }), 500
 
+@app.route('/test', methods=['GET'])
+def test():
+    try:
+        transactions = run_test()
+
+        print(transactions)
+
+        return jsonify({
+            'transactions': transactions,
+            'status': 'uspeh'
+        })
+    except Exception as e:
+        print(f'Napaka pri izvajanju testa: {str(e)}')
+        return jsonify({
+            'napaka': f'Napaka pri izvajanju testa: {str(e)}',
+            'status': 'napaka'
+        }), 500
 
 if __name__ == '__main__':
     print('Zaganjam Flask storitev na http://localhost:5000')
