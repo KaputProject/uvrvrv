@@ -4,6 +4,7 @@ import threading
 import re
 from datetime import datetime
 from pathlib import Path
+from typing import List
 
 from flask import Flask, request, jsonify, send_from_directory
 import numpy as np
@@ -13,23 +14,32 @@ import pytesseract
 
 test_image_path = "data/images/2/PXL_20260106_133002098.jpg"
 test_data_path = "data/data/2.json"
+known_partners = [
+    "LANA K.",
+    "UNIFITNES, D.O.O.",
+    "MDDSZ-DRZAVNE STIPENDIJE - ISCSD 2",
+    "ASPIRIA d.o.o.",
+    "PayPal Europe S.a.r.l. et Cie S.C.A",
+    "TELEKOM SLOVENIJE D.D.",
+    "PE DRAVSKE TERASE"
+]
 
 
 def run_test():
     image = Image.open(test_image_path)
-    transactions = extract_transactions_from_image(image)
+    transactions = extract_transactions_from_image(image,known_partners)
     # transactions = pytesseract.image_to_string(image)
     # print(compose_llm_prompt(transactions))
     return transactions
 
 
-def extract_transactions_from_image(image: Image.Image):
+def extract_transactions_from_image(image: Image.Image,known_partners: List[str]):
     print("Začen ekstrakcija transakcij iz slike...")
 
     text = pytesseract.image_to_string(image, lang='eng')
     print("Ekstrakcija končana.")
     print(text)
-    print(compose_llm_prompt(text))
+    print(compose_llm_prompt(text),known_partners)
     print("Pošiljam besedilo LLM-ju za nadaljnjo obdelavo...")
     try:
         response = LLMUtil.ask_MrGPT(
@@ -44,16 +54,7 @@ def extract_transactions_from_image(image: Image.Image):
     return response if response is not None else text
 
 
-def compose_llm_prompt(text: str) -> str:
-    known_partners = [
-        "LANA K.",
-        "UNIFITNES, D.O.O.",
-        "MDDSZ-DRZAVNE STIPENDIJE - ISCSD 2",
-        "ASPIRIA d.o.o.",
-        "PayPal Europe S.a.r.l. et Cie S.C.A",
-        "TELEKOM SLOVENIJE D.D.",
-        "PE DRAVSKE TERASE"
-    ]
+def compose_llm_prompt(text: str, known_partners: List[str]) -> str:
 
     prompt = f"""
 Iz naslednjega bančnega izpiska izlušči transakcije in jih pretvori v JSON.
