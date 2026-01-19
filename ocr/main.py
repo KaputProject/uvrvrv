@@ -39,11 +39,12 @@ def extract_transactions_from_image(image: Image.Image,known_partners: List[str]
     text = pytesseract.image_to_string(image, lang='eng')
     print("Ekstrakcija končana.")
     print(text)
-    print(compose_llm_prompt(text),known_partners)
+    print(compose_llm_prompt(text,known_partners))
+
     print("Pošiljam besedilo LLM-ju za nadaljnjo obdelavo...")
     try:
         response = LLMUtil.ask_MrGPT(
-            compose_llm_prompt(text),
+            compose_llm_prompt(text,known_partners),
             "You are a bank statement parser.",
             "llama-3.3-70b-versatile"
         )
@@ -94,6 +95,15 @@ Iz naslednjega bančnega izpiska izlušči transakcije in jih pretvori v JSON.
 
 **PRIMER:**
 {{
+
+  "user": "KUDER LUKA",
+  "iban": "SI56 6100 0002 2720 075",
+  "startDate": "30.01.2025",
+  "endDate": "28.02.2025",
+  "startBalance": 4640.62,
+  "endBalance": 4126.13,
+  "inflow": 941.26,
+  "outflow": 1455.75,
   "transactions": [
     {{
       "date": "17.02.2025",

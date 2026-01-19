@@ -151,4 +151,4 @@ if __name__ == '__main__':
     print('  POST /analiziraj    - Analiziraj sliko')
     print('  GET  /zgodovina     - Prikaži zgodovino')
     print('\nOdpri brskalnik na: http://localhost:5000')
-    app.run(host='localhost', port=5000, debug=True)
+    app.run(host='localhost', port=5001, debug=True)
