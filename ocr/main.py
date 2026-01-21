@@ -25,19 +25,16 @@ known_partners = [
 ]
 
 
-def run_test():
-    image = Image.open(test_image_path)
-    transactions = extract_transactions_from_image(image,known_partners)
-    # transactions = pytesseract.image_to_string(image)
-    # print(compose_llm_prompt(transactions))
+def run_test(image):
+    transactions = extract_transactions_from_image(image=image, locations=known_partners)
+
     return transactions
 
-
-def extract_transactions_from_image(image: Image.Image,known_partners: List[str]):
-    print("Začen ekstrakcija transakcij iz slike...")
+def extract_transactions_from_image(image: Image.Image, locations: List[str]):
+    print("Zacenjam ekstrakcijo transakcij iz slike...")
 
     text = pytesseract.image_to_string(image, lang='eng')
-    print("Ekstrakcija končana.")
+    print("Ekstrakcija koncana.")
     print(text)
     print(compose_llm_prompt(text,known_partners))
 
@@ -67,13 +64,16 @@ Iz naslednjega bančnega izpiska izlušči transakcije in jih pretvori v JSON.
 - Če je transakcija PRILIV (stanje narašča): `change` mora biti **POZITIVNO število**
 - **NIKOLI ne uporabljaj negativnih številk** v `change`
 - Primer: če stanje pade iz 4800.17 na 4563.12, je `change: 237.05` (ne -237.05)
+- Ne vstavljaj pike za tisočice (npr. 1.000.00 ni dovoljeno, uporabi 1000.00)
 
 **PRAVILA ZA POLJE `partner`:**
-- Če je v izpisu partner **"KUDER LUKA"** ali **prazen/nejasn**, uporabi:
-  - Ime trgovine/podjetja iz opisa (npr. "ZAVERSKI", "NLB TIVOLSKA 43")
-  - Če je na začetku opisa ime osebe, uporabi to (npr. "ANUŠKA N.", "KRAMAR ENEJ")
-- Če je partner različen od "KUDER LUKA", uporabi tega partnerja
 - Normaliziraj imena (odstrani odvečne presledke, popravi tipkarske napake)
+  - Lahko se zgodi, da bo ime, priimek združeno (npr. "LANAK.", "DAVIDG.")
+    - v takih primerih ko je zadnji znak ".", sta zadnja dva znaka priimek
+    - Razdeli ime in priimek pravilno (npr. "LANAK." -> "LANA K.", "DAVIDG." -> "DAVID G.")
+  - Pazi na partnerje, ki imajo poln priimek in so brez presledka (npr. "KUDERLUKA", "KRAMARENEJ")
+    - Razdeli jih pravilno tako, da poiščeš kje je ime (npr. "KUDERLUKA" -> "KUDER LUKA", "KRAMARENEJ" -> "KRAMAR ENEJ")
+- Razen v posebnih primerih, kjer je jasno navedeno drugače, vzami dve besedi kot ime in priimek
 
 **PRAVILA ZA POLJE `description`:**
 - Kopiraj celoten opis transakcije kot je v izpisu
@@ -83,6 +83,7 @@ Iz naslednjega bančnega izpiska izlušči transakcije in jih pretvori v JSON.
 - `true` **samo** če se partner **točno** ujema s seznamom znanih partnerjev spodaj
 - Primerjaj celotno ime (npr. "PayPal Europe S.a.r.l. et Cie S.C.A" ≠ "PayPal")
 - `false` za vse ostale, vključno z "KUDER LUKA"
+- Normalizacija imena izvajaj enako kot za polje `partner`
 
 **ZNANI PARTNERJI (case-sensitive):**
 {chr(10).join(f"- {p}" for p in known_partners)}

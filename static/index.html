@@ -3,216 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analiza Slik - Kamera</title>
+    <title>Analiza Slik</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; }
+        .main { display: flex; gap: 32px; padding: 32px; }
+        .left, .right { flex: 1; }
+        .preview-img { max-width: 100%; max-height: 400px; border: 1px solid #ccc; margin-top: 16px; }
+        .json-box { background: #f8f8f8; border: 1px solid #ccc; padding: 16px; white-space: pre-wrap; word-break: break-all; }
+        .buttons { margin-bottom: 16px; }
+        .input-row { margin-bottom: 16px; }
+        label { margin-right: 8px; }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Analiza Slik iz Kamere</h1>
-        
-        <div class="status" id="status">Kamera ni aktivna</div>
-        
-        <video id="video" autoplay playsinline></video>
-        <canvas id="canvas"></canvas>
-        
-        <div class="buttons">
-            <button id="zacniBtn" onclick="zacniKamero()">Zaženi kamero</button>
-            <button id="zajemiBtn" onclick="zajemiInPoslji()" disabled>Zajemi in analiziraj</button>
-            <button id="testBtn" onclick="zazeniTest()">Zazeni test</button>
+    <h1 style="text-align:center;">Analiza Slik</h1>
+    <div class="main">
+        <div class="left">
+            <div class="buttons">
+                <input type="file" id="slikaInput" accept="image/*">
+                <div class="input-row">
+                    <label for="primerjalnaStevilka">Primerjalna številka:</label>
+                    <input type="number" id="primerjalnaStevilka" min="0" step="1">
+                </div>
+                <button id="analizirajSlikoBtn" disabled>Analiziraj sliko</button>
+            </div>
+            <img id="preview" class="preview-img" style="display:none;">
         </div>
-        
-        <div class="rezultat" id="rezultat"></div>
-        
-        <div class="zgodovina">
-            <h2>Zgodovina analiz</h2>
-            <button onclick="naloziZgodovino()">Osveži zgodovino</button>
-            <table id="zgodovinaTabela">
-                <thead>
-                    <tr>
-                        <th>Čas</th>
-                        <th>Povprečje</th>
-                        <th>Velikost</th>
-                    </tr>
-                </thead>
-                <tbody id="zgodovinaTelo">
-                    <tr><td colspan="3" style="text-align: center;">Ni podatkov</td></tr>
-                </tbody>
-            </table>
+        <div class="right">
+            <h2>JSON rezultat</h2>
+            <div id="jsonResult" class="json-box"></div>
         </div>
     </div>
-
     <script>
-        const video = document.getElementById('video');
-        const canvas = document.getElementById('canvas');
-        const ctx = canvas.getContext('2d');
-        const status = document.getElementById('status');
-        const zacniBtn = document.getElementById('zacniBtn');
-        const zajemiBtn = document.getElementById('zajemiBtn');
-        const rezultatDiv = document.getElementById('rezultat');
-        
-        let stream = null;
+        const slikaInput = document.getElementById('slikaInput');
+        const analizirajSlikoBtn = document.getElementById('analizirajSlikoBtn');
+        const preview = document.getElementById('preview');
+        const jsonResult = document.getElementById('jsonResult');
+        const primerjalnaStevilkaInput = document.getElementById('primerjalnaStevilka');
+        let selectedFile = null;
+        let primerjalnaStevilka = null;
 
-        async function zacniKamero() {
-            try {
-                stream = await navigator.mediaDevices.getUserMedia({ 
-                    video: { 
-                        width: 640, 
-                        height: 480 
-                    } 
-                });
-                
-                video.srcObject = stream;
-                status.textContent = 'Kamera aktivna';
-                status.style.color = 'green';
-                zajemiBtn.disabled = false;
-                zacniBtn.textContent = 'Ustavi kamero';
-                zacniBtn.onclick = ustaviKamero;
-                
-            } catch (error) {
-                console.error('Napaka pri dostopu do kamere:', error);
-                status.textContent = 'Napaka: ' + error.message;
-                status.style.color = 'red';
+        primerjalnaStevilkaInput.addEventListener('input', () => {
+            primerjalnaStevilka = primerjalnaStevilkaInput.value;
+        });
+
+        slikaInput.addEventListener('change', () => {
+            if (slikaInput.files.length > 0) {
+                selectedFile = slikaInput.files[0];
+                analizirajSlikoBtn.disabled = false;
+                const reader = new FileReader();
+                reader.onload = e => {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                };
+                reader.readAsDataURL(selectedFile);
+            } else {
+                preview.style.display = 'none';
+                analizirajSlikoBtn.disabled = true;
+                selectedFile = null;
             }
-        }
+            jsonResult.textContent = '';
+        });
 
-        function ustaviKamero() {
-            if (stream) {
-                stream.getTracks().forEach(track => track.stop());
-                video.srcObject = null;
-                status.textContent = 'Kamera ustavljena';
-                status.style.color = '#666';
-                zajemiBtn.disabled = true;
-                zacniBtn.textContent = 'Zaženi kamero';
-                zacniBtn.onclick = zacniKamero;
+        analizirajSlikoBtn.addEventListener('click', async () => {
+            if (!selectedFile) return;
+            const formData = new FormData();
+            formData.append('slika', selectedFile, selectedFile.name || 'slika.png');
+            formData.append('cas', new Date().toISOString());
+            if (primerjalnaStevilka !== null && primerjalnaStevilka !== '') {
+                formData.append('primerjalna_stevilka', primerjalnaStevilka);
             }
-        }
+            jsonResult.textContent = 'Pošiljam...';
 
-        async function zajemiInPoslji() {
-            // Nastavi canvas na velikost videa
-            canvas.width = video.videoWidth;
-            canvas.height = video.videoHeight;
-            
-            // Zajemi trenutni frame
-            ctx.drawImage(video, 0, 0);
-            
-            // Pretvori v blob
-            canvas.toBlob(async (blob) => {
-                if (!blob) {
-                    prikaziRezultat('Napaka pri zajemu slike', false);
-                    return;
-                }
-                
-                // Pripravi form data
-                const formData = new FormData();
-                formData.append('slika', blob, 'zajeta_slika.png');
-                formData.append('cas', new Date().toISOString());
-                
-                try {
-                    status.textContent = '⏳ Pošiljam na strežnik...';
-                    zajemiBtn.disabled = true;
-                    
-                    const response = await fetch('/analiziraj', {
-                        method: 'POST',
-                        body: formData
-                    });
-                    
-                    const data = await response.json();
-                    
-                    if (data.status === 'uspeh') {
-                        prikaziRezultat(
-                            `Uspešno!<br>
-                            Povprečna vrednost: <strong>${data.povprecna_vrednost.toFixed(2)}</strong><br>
-                            Velikost: ${data.velikost_slike.visina}x${data.velikost_slike.sirina}`,
-                            true
-                        );
-                        naloziZgodovino();
-                    } else {
-                        prikaziRezultat('Napaka: ' + data.napaka, false);
-                    }
-                    
-                    status.textContent = 'Kamera aktivna';
-                    zajemiBtn.disabled = false;
-                    
-                } catch (error) {
-                    console.error('Napaka pri pošiljanju:', error);
-                    prikaziRezultat('Napaka pri komunikaciji s strežnikom', false);
-                    status.textContent = 'Napaka pri pošiljanju';
-                    zajemiBtn.disabled = false;
-                }
-            }, 'image/png');
-        }
-
-        function prikaziRezultat(sporocilo, uspeh) {
-            rezultatDiv.innerHTML = sporocilo;
-            rezultatDiv.className = 'rezultat ' + (uspeh ? 'uspeh' : 'napaka');
-            rezultatDiv.style.display = 'block';
-            
-            // Skrij po 5 sekundah
-            setTimeout(() => {
-                rezultatDiv.style.display = 'none';
-            }, 5000);
-        }
-
-        async function zazeniTest() {
             try {
-                status.textContent = '⏳ Pošiljam testno sliko...';
-                zajemiBtn.disabled = true;
-
-                const response = await fetch('/test');
+                const response = await fetch('/test', { method: 'POST', body: formData });
                 const data = await response.json();
-
-                if (data.status === 'uspeh') {
-                    prikaziRezultat(
-                        `Test uspešen!<br>
-                        Povprečna vrednost: <strong>${data.povprecna_vrednost.toFixed(2)}</strong><br>
-                        Velikost: ${data.velikost_slike.visina}x${data.velikost_slike.sirina}`,
-                        true
-                    );
-                    naloziZgodovino();
-                } else {
-                    prikaziRezultat('Napaka: ' + data.napaka, false);
-                }
-
-                status.textContent = 'Kamera aktivna';
-                zajemiBtn.disabled = false;
-
-            } catch (error) {
-                console.error('Napaka pri testu:', error);
-                prikaziRezultat('Napaka pri komunikaciji s strežnikom', false);
-                status.textContent = 'Napaka pri pošiljanju';
-                zajemiBtn.disabled = false;
+                jsonResult.textContent = JSON.stringify(data, null, 2);
+            } catch (err) {
+                jsonResult.textContent = 'Napaka pri komunikaciji s strežnikom.';
             }
-        }
-
-        async function naloziZgodovino() {
-            try {
-                const response = await fetch('/zgodovina');
-                const data = await response.json();
-                
-                const telo = document.getElementById('zgodovinaTelo');
-                
-                if (data.rezultati.length === 0) {
-                    telo.innerHTML = '<tr><td colspan="3" style="text-align: center;">Ni podatkov</td></tr>';
-                    return;
-                }
-                
-                telo.innerHTML = data.rezultati
-                    .slice(-10)  // Zadnjih 10
-                    .reverse()   // Najnovejši na vrh
-                    .map(r => `
-                        <tr>
-                            <td>${new Date(r.cas).toLocaleString('sl-SI')}</td>
-                            <td>${parseFloat(r.povprecna_vrednost).toFixed(2)}</td>
-                            <td>${r.velikost_slike}</td>
-                        </tr>
-                    `).join('');
-                    
-            } catch (error) {
-                console.error('Napaka pri nalaganju zgodovine:', error);
-            }
-        }
-
-        // Naloži zgodovino ob zagonu
-        window.onload = naloziZgodovino;
+        });
     </script>
 </body>
 </html>
