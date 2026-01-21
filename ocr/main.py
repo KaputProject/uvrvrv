@@ -25,25 +25,22 @@ known_partners = [
 ]
 
 
-def run_test():
-    image = Image.open(test_image_path)
-    transactions = extract_transactions_from_image(image,known_partners)
-    # transactions = pytesseract.image_to_string(image)
-    # print(compose_llm_prompt(transactions))
+def run_test(image):
+    transactions = extract_transactions_from_image(image=image, locations=known_partners)
+
     return transactions
 
-
-def extract_transactions_from_image(image: Image.Image,known_partners: List[str]):
+def extract_transactions_from_image(image: Image.Image, locations: List[str]):
     print("Začen ekstrakcija transakcij iz slike...")
 
     text = pytesseract.image_to_string(image, lang='eng')
     print("Ekstrakcija končana.")
     print(text)
-    print(compose_llm_prompt(text),known_partners)
+    print(compose_llm_prompt(text, locations))
     print("Pošiljam besedilo LLM-ju za nadaljnjo obdelavo...")
     try:
         response = LLMUtil.ask_MrGPT(
-            compose_llm_prompt(text),
+            compose_llm_prompt(text, locations),
             "You are a bank statement parser.",
             "llama-3.3-70b-versatile"
         )
