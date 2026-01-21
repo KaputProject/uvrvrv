@@ -96,12 +96,16 @@ def test():
     if time is None:
         time = datetime.now().isoformat()
 
+    statement_number = request.form.get('primerjalna_stevilka')
+    if statement_number is None:
+        statement_number = '1'
+
     try:
         slika_bytes = slika_file.read()
         slika_pil = Image.open(io.BytesIO(slika_bytes))
 
         data = run_test(slika_pil)
-        # TODO: tuki naredi teste svoje gucc
+        # TODO: tuki naredi teste svoje gucc glede na to keri statement number je podan, to je tvoj resnicni izpisek
 
         return jsonify({
             'type': 'test',
