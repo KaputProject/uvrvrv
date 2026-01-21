@@ -12,6 +12,7 @@ from PIL import Image
 import pytesseract
 
 from ocr.main import extract_transactions_from_image, run_test
+from utils.testingUtil import run_comparison_test, get_statistics_summary
 
 app = Flask(__name__, static_folder='static/')
 
@@ -80,6 +81,7 @@ def analiziraj():
 
 @app.route('/test', methods=['POST'])
 def test():
+    print("Prejeto zahtevo za testiranje.")
     if 'slika' not in request.files:
         return jsonify({
             'napaka': 'Manjka polje "slika"'
@@ -104,13 +106,19 @@ def test():
         slika_bytes = slika_file.read()
         slika_pil = Image.open(io.BytesIO(slika_bytes))
 
+        #test_image_path = 'data/images/5/PXL_20260106_132658419.jpg'
+        #slika_pil = Image.open(test_image_path)
+
         data = run_test(slika_pil)
-        # TODO: tuki naredi teste svoje gucc glede na to keri statement number je podan, to je tvoj resnicni izpisek
+        
+        # Izvedi primerjalni test
+        test_result = run_comparison_test(statement_number, data)
+        statistics = get_statistics_summary(test_result)
 
         return jsonify({
             'type': 'test',
             'time': time,
-            'statistics': {},
+            'statistics': statistics,
             'data': data,
         })
     except Exception as e:
