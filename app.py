@@ -44,15 +44,6 @@ def index():
 
 @app.route('/analiziraj', methods=['POST'])
 def analiziraj():
-    """
-    Prejme sliko in časovno značko, izračuna povprečno vrednost.
-    
-    Pričakovani format zahtevka:
-    - multipart/form-data
-    - polje 'slika': slika (JPEG, PNG, ...)
-    - polje 'cas': časovna značka (ISO format ali timestamp)
-    """
-    # Preveri ali je slika prisotna
     if 'slika' not in request.files:
         return jsonify({
             'napaka': 'Manjka polje "slika"'
@@ -64,39 +55,20 @@ def analiziraj():
         return jsonify({
             'napaka': 'Prazno ime datoteke'
         }), 400
-    
-    # Pridobi časovno značko
+
     cas = request.form.get('cas')
     if cas is None:
-        # Če časovna značka ni podana, uporabi trenutni čas
         cas = datetime.now().isoformat()
     
     try:
-        # Naloži sliko
         slika_bytes = slika_file.read()
         slika_pil = Image.open(io.BytesIO(slika_bytes))
-        
-        # Pretvori v numpy tabelo
-        slika_np = np.array(slika_pil)
-        
-        # Analiziraj
-        povprecna_vrednost = float(np.mean(slika_np))
-        
-        # Zapiši rezultat v bazo
-        velikost = slika_np.shape[:2]
-        zapisi_v_csv(cas, povprecna_vrednost, velikost)
 
-        transactions = extract_transactions_from_image(slika_pil)
+        data = extract_transactions_from_image(slika_pil)
 
         return jsonify({
             'cas': cas,
-            'povprecna_vrednost': povprecna_vrednost,
-            'velikost_slike': {
-                'visina': velikost[0],
-                'sirina': velikost[1]
-            },
-            'transactions': transactions,
-            'status': 'uspeh'
+            'data': data,
         })
     
     except Exception as e:
@@ -106,36 +78,36 @@ def analiziraj():
         }), 500
 
 
-@app.route('/zgodovina', methods=['GET'])
-def zgodovina():
-    """Vrne zgodovino vseh analiz."""
-    try:
-        with csv_lock:
-            with open(CSV_PATH, 'r') as f:
-                reader = csv.DictReader(f)
-                rezultati = list(reader)
-        
-        return jsonify({
-            'stevilo_rezultatov': len(rezultati),
-            'rezultati': rezultati,
-            'status': 'uspeh'
-        })
-    
-    except Exception as e:
-        return jsonify({
-            'napaka': f'Napaka pri branju zgodovine: {str(e)}',
-            'status': 'napaka'
-        }), 500
-@app.route('/test', methods=['GET'])
+@app.route('/test', methods=['POST'])
 def test():
-    try:
-        transactions = run_test()
+    if 'slika' not in request.files:
+        return jsonify({
+            'napaka': 'Manjka polje "slika"'
+        }), 400
 
-        print(transactions)
+    slika_file = request.files['slika']
+
+    if slika_file.filename == '':
+        return jsonify({
+            'napaka': 'Prazno ime datoteke'
+        }), 400
+
+    time = request.form.get('cas')
+    if time is None:
+        time = datetime.now().isoformat()
+
+    try:
+        slika_bytes = slika_file.read()
+        slika_pil = Image.open(io.BytesIO(slika_bytes))
+
+        data = run_test(slika_pil)
+        # TODO: tuki naredi teste svoje gucc
 
         return jsonify({
-            'transactions': transactions,
-            'status': 'uspeh'
+            'type': 'test',
+            'time': time,
+            'statistics': {},
+            'data': data,
         })
     except Exception as e:
         print(f'Napaka pri izvajanju testa: {str(e)}')
@@ -149,6 +121,5 @@ if __name__ == '__main__':
     print('Endpoints:')
     print('  GET  /              - Spletna stran z kamero')
     print('  POST /analiziraj    - Analiziraj sliko')
-    print('  GET  /zgodovina     - Prikaži zgodovino')
     print('\nOdpri brskalnik na: http://localhost:5000')
     app.run(host='localhost', port=5000, debug=True)
